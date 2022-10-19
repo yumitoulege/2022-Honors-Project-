@@ -1,0 +1,32 @@
+//lab 3 compute the sum and average of 4 numbers
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+
+	Scanner scnr = new Scanner (System.in);
+
+	System.out.print("Enter your first number  : ");
+	int firstNumber = scnr.nextInt();
+	System.out.print("Enter your second number : ");
+	int secondNumber = scnr.nextInt();
+	System.out.print("Enter your third number  : ");
+	int thirdNumber = scnr.nextInt();
+	System.out.print("Enter your fourth number : ");
+	int fourthNumber = scnr.nextInt();
+
+	int sum;
+	double average; 
+
+	sum = firstNumber + secondNumber + thirdNumber + fourthNumber;
+	average = (sum) / 4; 
+
+	System.out.println("The sum of the user inputs of " + firstNumber + " " + secondNumber + " " + thirdNumber + " " + fourthNumber + " is: " + sum);
+
+	System.out.println("The average of the user inputs of " + firstNumber + " " + secondNumber + " " + thirdNumber + " " + fourthNumber + " is: " + average);
+
+
+
+	}
+}
