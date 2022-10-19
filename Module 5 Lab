@@ -1,0 +1,53 @@
+//favorite song info
+//assume that all songs entered will be one worded or titles with no spaces 
+//assume the the artists will be entered with no spaces in between if more than word artist name
+//ex: tellmewhatuwant aldn 3:13 January 2022
+
+
+import java.util.Scanner; 
+
+public class Main {
+	public static void main(String [] args) {
+	Scanner scnr = new Scanner(System.in);
+
+	String songInfo = ""; //tellmewhatuwant aldn 3:13 January 2022
+	String title = "";
+	String artist = "";
+	String length = "";
+	String month = "";
+	String year = "";
+
+	int indexFirstSpace = 0;
+	int indexSecondSpace = 0;
+	int indexThirdSpace = 0;
+	int indexFourthSpace = 0;
+	int indexYear = 0;
+
+
+	System.out.print("Enter song info : ");
+	songInfo = scnr.nextLine();
+	System.out.println("");
+	System.out.println("");
+
+	indexFirstSpace = songInfo.indexOf(" ");
+	indexSecondSpace = songInfo.indexOf(" ", indexFirstSpace + 1);
+	indexThirdSpace = songInfo.indexOf(" ", indexSecondSpace + 1);
+	indexFourthSpace = songInfo.indexOf(" ", indexThirdSpace + 1);
+	//indexYear = songInfo.index(indexFourthSpace + 1);
+	
+
+	title = songInfo.substring(0, indexFirstSpace);
+	artist = songInfo.substring(indexFirstSpace + 1, indexSecondSpace);
+	length = songInfo.substring(indexSecondSpace + 1, indexThirdSpace);
+	month = songInfo.substring(indexThirdSpace + 1, indexFourthSpace);
+	year = songInfo.substring(indexFourthSpace + 1);
+
+	System.out.println("Song title    : " + title);
+	System.out.println("Artist name   : " + artist);
+	System.out.println("Song length   : " + length);
+	System.out.println("Release month : " + month);
+	System.out.println("Release year  : " + year);
+	
+
+	}
+}
