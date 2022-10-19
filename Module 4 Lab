@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	Scanner scnr = new Scanner(System.in);
+
+	int totalToys = 0;
+	int numberOfChildren = 0;
+	int numberOfToysPerChild = 0;
+	int toDonation = 0;
+
+	System.out.print("Total Toys: ");
+	totalToys = scnr.nextInt();
+	System.out.print("Number of Children: ");
+	numberOfChildren = scnr.nextInt();
+
+	numberOfToysPerChild = totalToys / numberOfChildren;
+	toDonation = totalToys - (numberOfToysPerChild * numberOfChildren);
+
+	System.out.println("Each child will get : " + numberOfToysPerChild + " toys");
+	System.out.println(toDonation + " toys will be donated");
+
+	}
+}
