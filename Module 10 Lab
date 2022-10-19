@@ -1,0 +1,28 @@
+//get all number between the two numbers given 
+//assume the first number will be less than the second
+//return a new array
+
+public class Main {
+	public static void main(String[] args) {
+	int[] myArray = {1, 22, 333, 400, 5005, 9};
+	getAllInBetween(myArray, 200, 400);
+	}
+	public static int[] getAllInBetween(int[] myArray, int min, int max){
+	int count = 0; 
+	for(int i = 0; i < myArray.length; ++i){
+	if((myArray[i] > min && myArray[i] < max)){
+	count++;
+	}
+	}
+	int[] newArray = new int[count];
+	count = 0; 
+	for(int i = 0; i < myArray.length; ++i){
+	if((myArray[i] > min && myArray[i] < max)){
+	newArray[count] = myArray[i];
+	count++;
+	}
+	}
+	return newArray;
+	}
+
+}
