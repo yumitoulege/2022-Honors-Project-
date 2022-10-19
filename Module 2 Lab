@@ -1,0 +1,30 @@
+import java.util.Scanner; 
+
+public class Main {
+	public static void main(String[] args) {
+	//declare and instantiate a scanner
+
+	Scanner scnr = new Scanner (System.in);
+
+	//declare and initialize variables
+
+	final double DOLLARS_PER_APPLE = 2.50;
+	int numberOfApples = 0;
+	double costOfApples = 0.0;
+
+	//gather input
+
+	System.out.print("How many apples do you want to buy? : ");
+	numberOfApples = scnr.nextInt();
+
+	//calculate the price 
+
+	costOfApples = numberOfApples * DOLLARS_PER_APPLE;
+
+	System.out.printf("The total cost is %.2f\n", costOfApples);
+
+
+	}
+}
+
+//How much would x number of apples cost if each apple costs $2.50?
