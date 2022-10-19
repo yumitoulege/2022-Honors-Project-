@@ -1,0 +1,18 @@
+import java.util.Scanner; 
+import java.io.FileInputStream;
+import java.io.IOException;
+
+class Main {
+	public static void main(String[] args) throws IOException{
+	displayFileContents("ParkPhotos.txt");
+	}
+
+	public static void displayFileContents(String fileName) throws IOException{
+	FileInputStream myFile = new FileInputStream(fileName);
+	Scanner myFileReader = new Scanner(myFile);
+	while(myFileReader.hasNextLine()){
+	String line = myFileReader.nextLine();
+	System.out.println(line);
+	}
+	}
+}
