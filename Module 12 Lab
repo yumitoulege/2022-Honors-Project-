@@ -1,0 +1,39 @@
+//class with setter methods 
+//you must complete the penguin class (in the penguin.java file)
+//define a public setter (mutator) method for two fields: name and whether it is a boy or a girl  
+//the name mutator should be named setName and the gender mutator should be named setGender
+
+public class Main {
+	public static void main(String[] args) {
+	Penguin myPenguin = new Penguin();
+	Penguin yourPenguin = new Penguin(); 
+
+	myPenguin.setName("Pengy"); 
+	myPenguin.setGender("Female");
+
+	yourPenguin.setName("Peppermint");
+	yourPenguin.setGender("Male");
+
+	myPenguin.print();
+	yourPenguin.print();
+
+	}
+}
+
+// class Penguin
+class Penguin{
+	private String name;
+	private String gender;
+
+	public void setName(String penguinName){
+	name = penguinName;
+	}
+
+	public void setGender(String penguinGender){
+	gender = penguinGender;
+	}
+
+	public void print() {
+	System.out.println(name + " is a " + gender);
+	}
+}
