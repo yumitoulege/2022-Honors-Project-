@@ -1,0 +1,21 @@
+//get all the integers between the range and put them into a new array list
+//return new array list 
+//assume the first number is less than the second number
+
+import java.util.ArrayList;
+
+public class Main {
+	public static void main(String[] args) {
+
+	}
+	public static ArrayList<Integer> betweenRange(ArrayList<Integer> myArray, int min, int max) {
+	ArrayList<Integer> newArray = new ArrayList<Integer>();
+	for(int i = 0; i < myArray.size(); ++i) {
+	if((myArray.get(i) > min && myArray.get(i) < max)) {
+	newArray.add(myArray.get(i));
+
+	}
+	}
+	return newArray;
+	}
+}
