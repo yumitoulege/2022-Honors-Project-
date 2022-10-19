@@ -1,0 +1,15 @@
+//Print Hello
+//print name
+//solution
+
+public class Main {
+	public static void main(String[] args) {
+
+	String name = "Yumi Toulegenova";
+
+	System.out.println("Hello");
+	System.out.println(name);
+
+	}
+
+}
