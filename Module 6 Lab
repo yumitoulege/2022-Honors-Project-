@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	   Scanner scnr = new Scanner(System.in);
+	
+	double width = scnr.nextDouble();
+	double length = scnr.nextDouble(); 
+	double height = scnr.nextDouble();
+
+	volumeOfPool(width, length, height);
+	numberOfTilesAround(width, length);
+	numberOfTilesFloor(width, length);
+
+	System.out.printf("Volume of the pool : %.2f\n", volumeOfPool(width, length, height));
+	System.out.println("Number of Tiles around the pool : " + numberOfTilesAround(width, length));
+	System.out.println("Number of Tiles on the floor: " + numberOfTilesFloor(width, length));
+	
+	}
+	public static double volumeOfPool(double width, double length, double height) {
+	//volume = width * length * height
+
+	double volume = width * length * height;
+	return volume; 
+
+	}
+	public static int numberOfTilesAround(double width, double length) {
+
+	int numberOfTilesAround = (int)(Math.ceil(width + width + length + length));
+	return numberOfTilesAround;
+
+	}
+	public static int numberOfTilesFloor(double width, double length) {
+
+	int numberOfTilesFloor = (int)(Math.ceil(width * length));
+	return numberOfTilesFloor;
+	}
+
+
+}
+
+//get input for width, length, height 
+//calculate the volume of a pool that needs to be built 
+//calculate the number of tiles that will need to be needed around the pool
+//calculate the number of tiles that will need to be purchased to cover the floor of the pool
+//print volume, number of tiles around the pool, number of tiles on the florr
+//make sure the volume only has two decimal places
