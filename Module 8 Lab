@@ -1,0 +1,23 @@
+import java.util.Scanner; 
+
+public class Main {
+   public static void main(String[] args) {
+
+   Scanner scnr = new Scanner(System.in);
+      
+      int number = scnr.nextInt();
+      int max = scnr.nextInt();
+      countUpFromAndTo(number, max);
+   }
+   
+   public static void countUpFromAndTo(int number, int max) {
+      int i;
+      for (i = number; i <= max; i++) {
+         System.out.print(i + " ");
+       
+      }
+   }
+   
+}
+
+//count up from first number and end at last number
